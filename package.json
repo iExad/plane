@@ -11,7 +11,8 @@
     "packages/tailwind-config-custom",
     "packages/tsconfig",
     "packages/ui",
-    "packages/types"
+    "packages/types",
+    "channel"
   ],
   "scripts": {
     "build": "turbo run build",
