@@ -1395,6 +1395,20 @@
   dependencies:
     lib0 "^0.2.87"
 
+"@hocuspocus/extension-database@^2.11.3":
+  version "2.11.3"
+  resolved "https://registry.yarnpkg.com/@hocuspocus/extension-database/-/extension-database-2.11.3.tgz#a7c00cb5b44bdbcd6b6749462d199147165a3d97"
+  integrity sha512-lERFgBI5BOLkKijh5M9G/giFuyVLy2qisUYv1Nt+94+q3w4hj3lq43o/pYaLaC8PiHcQ+nbDSBTtTTO9jjt7lQ==
+  dependencies:
+    "@hocuspocus/server" "^2.11.3"
+
+"@hocuspocus/extension-logger@^2.11.3":
+  version "2.11.3"
+  resolved "https://registry.yarnpkg.com/@hocuspocus/extension-logger/-/extension-logger-2.11.3.tgz#392e0aebdc0c496d5eeb21d83628905ca8037c73"
+  integrity sha512-uyVOA0J+SB8yQGZk7TYj+zL0G176ABbW5XatSkGIeQsqVGP8T03uYWS2+5i0tejM2WEHfGdeb3HlHNQgp9f3Xg==
+  dependencies:
+    "@hocuspocus/server" "^2.11.3"
+
 "@hocuspocus/provider@^2.11.3":
   version "2.11.3"
   resolved "https://registry.yarnpkg.com/@hocuspocus/provider/-/provider-2.11.3.tgz#b5274f976348c1e1cd3595ed3c6ff13b10b4829b"
@@ -2902,7 +2916,7 @@
   dependencies:
     "@types/react" "*"
 
-"@types/react@*", "@types/react@18.2.42", "@types/react@^18.2.42":
+"@types/react@*", "@types/react@^18.2.42":
   version "18.2.42"
   resolved "https://registry.yarnpkg.com/@types/react/-/react-18.2.42.tgz#6f6b11a904f6d96dda3c2920328a97011a00aba7"
   integrity sha512-c1zEr96MjakLYus/wPnuWDo1/zErfdU9rNsIGmE+NV71nx88FG9Ttgo5dqorXTu/LImX2f63WBP986gJkMPNbA==
@@ -4168,6 +4182,11 @@ date-fns@^2.30.0:
   integrity sha512-fnULvOpxnC5/Vg3NCiWelDsLiUc9bRwAPs/+LfTLNvetFCtCTN+yQz15C/fs4AwX1R9K5GLtLfn8QW+dWisaAw==
   dependencies:
     "@babel/runtime" "^7.21.0"
+
+debounce@^2.0.0:
+  version "2.0.0"
+  resolved "https://registry.yarnpkg.com/debounce/-/debounce-2.0.0.tgz#b2f914518a1481466f4edaee0b063e4d473ad549"
+  integrity sha512-xRetU6gL1VJbs85Mc4FoEGSjQxzpdxRyFhe3lmWFyy2EzydIcD4xzUvRJMD+NPDfMwKNhxa3PvsIOU32luIWeA==
 
 debug@2.6.9:
   version "2.6.9"
