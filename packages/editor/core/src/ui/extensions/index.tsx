@@ -31,7 +31,9 @@ import { CustomHorizontalRule } from "src/ui/extensions/horizontal-rule/horizont
 import { CustomCodeMarkPlugin } from "src/ui/extensions/custom-code-inline/inline-code-plugin";
 import { UploadImage } from "src/types/upload-image";
 import { DropHandlerExtension } from "src/ui/extensions/drop";
-
+import CollaborationCursor from "@tiptap/extension-collaboration-cursor";
+import Collaboration from "@tiptap/extension-collaboration";
+import { HocuspocusProvider } from "@hocuspocus/provider";
 type TArguments = {
   mentionConfig: {
     mentionSuggestions?: () => Promise<IMentionSuggestion[]>;
@@ -45,6 +47,20 @@ type TArguments = {
   };
   placeholder?: string | ((isFocused: boolean) => string);
 };
+
+// Set up the Hocuspocus WebSocket provider
+const provider = new HocuspocusProvider({
+  url: "ws://127.0.0.1:1234",
+  name: "example-document",
+});
+
+function getRandomUser() {
+  const users = [
+    { name: "Akash", color: "#f783ac" },
+    { name: "Palani", color: "#4caf50" },
+  ];
+  return users[Math.floor(Math.random() * users.length)];
+}
 
 export const CoreEditorExtensions = ({
   mentionConfig,
@@ -70,11 +86,19 @@ export const CoreEditorExtensions = ({
     code: false,
     codeBlock: false,
     horizontalRule: false,
+    history: false,
     blockquote: false,
     dropcursor: {
       color: "rgba(var(--color-text-100))",
       width: 1,
     },
+  }),
+  Collaboration.configure({
+    document: provider.document,
+  }),
+  CollaborationCursor.configure({
+    provider: provider,
+    user: getRandomUser(),
   }),
   CustomQuoteExtension,
   DropHandlerExtension(uploadFile),
