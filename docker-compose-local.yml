@@ -1,7 +1,3 @@
-networks:
-  dev_env:
-    driver: bridge
-
 volumes:
   redisdata:
   uploads:
